@@ -1,85 +1,74 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300;400;500;700;900&display=swap');
 
-
-:root{
+:root {
     --body-font: 'Montserrat', sans-serif;
-    --neon-green-color:rgb(100, 255, 218);
+    --neon-green-color: rgb(100, 255, 218);
 }
 
-html{
-	font-family: var(--body-font);
-	font-size:15px;
-	color:var(--body-font-color);
-	scroll-behavior: smooth;
+html {
+    font-family: var(--body-font);
+    font-size: 16px;
+    color: rgb(178, 211, 236);
+    scroll-behavior: smooth;
 }
 
-body{
-	overflow:hidden; 
+body {
+    overflow-x: hidden;
     margin: 0;
+    padding: 0;
     background-color: rgb(10, 25, 47);
-    height: 100vh;
 }
 
-p, h1, h2, h3, a, ul{
+p, h1, h2, h3, a, ul {
     margin: 0;
     padding: 0;
     text-decoration: none;
-    color:rgb(178, 211, 236);
 }
 
-.hero{
-    padding:2rem 3.9rem;
+.hero {
+    margin: 0 auto;
+    padding: 2rem;
 }
 
-.top{
+.top {
     display: flex;
     align-items: center;
     flex-direction: column;
 }
 
-.intro {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    animation: fade-in 4s forwards;
-}
-  
 .intro h1 {
-    display: inline;
     font-size: 2.4rem;
     color: var(--neon-green-color);
 }
-  
-.intro p {
-    display: inline;
-    font-size: 24px;
+
+.intro span{
+    font-size: 30px;
+    color:rgb(178, 211, 236);
 }
 
 .img-container {
     position: relative;
     width: 30%;
-    height: 30%;
-    margin: 2%;
+    height: auto;
+    margin: 2% 0;
     border-radius: 5px;
 }
 
-.img-container:hover .before{
+.img-container:hover .before {
     background-color: rgba(100, 255, 218, 0.3);
 }
 
 .img-container:hover::after {
     background-color: transparent;
 }
-  
+
 .img-container::after {
     content: "";
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
-    height: 98.5%;
+    height: 100%;
     border-radius: 10px;
     background-color: rgba(100, 255, 218, 0.45);
     pointer-events: none;
@@ -87,7 +76,7 @@ p, h1, h2, h3, a, ul{
     transition: 0.5s ease;
 }
 
-#jake{
+#jake {
     width: 100%;
     height: 100%;
     z-index: 1;
@@ -95,8 +84,7 @@ p, h1, h2, h3, a, ul{
     filter: blur(0.4px) grayscale(10%);
 }
 
-
-.before{
+.before {
     position: absolute;
     top: 3%;
     left: 3%;
@@ -109,32 +97,37 @@ p, h1, h2, h3, a, ul{
     transition: 0.5s ease;
 }
 
-.middle{
-    margin-top: 1.4rem;
+.middle {
+    margin-top: 1rem;
     display: flex;
     justify-content: space-around;
+    padding:0;
 }
 
-.about{
-    width: 50%;
+
+.middle-section {
+    width: 100%;
+    max-width: 500px;
+    margin: 0 15px;
 }
 
-.about p{
-    line-height: 28px;
+
+.about p {
+    line-height: 24px;
     text-align: center;
 }
 
-.experience{
+.experience {
     line-height: 24px;
 }
 
-.experience li{
+.experience li {
     position: relative;
     left: 4%;
 }
 
-.bottom{
-    margin: 50px 0;
+.bottom {
+    margin: 20px 0;
     display: flex;
     justify-content: center;
 }
@@ -142,38 +135,61 @@ p, h1, h2, h3, a, ul{
 .socials {
     display: flex;
     font-size: 2rem;
-    position: relative;
 }
 
-.socials::after {
-    content: "";
-    position: absolute;
-    top: 130%;
-    left: 0;
-    width: 100%;
-    height: 1px;
-    border-radius: 10px;
-    background-color: rgba(100, 255, 218, 0.45);
-    pointer-events: none;
-    z-index: 2;
-    transition: 0.5s ease;
-}
-
-.socials i {
+.socials a {
     color: rgb(178, 211, 236);
+    margin: 0 10px;
     transition: transform 0.5s ease;
-    margin: 0 20px;
-    position: relative;
 }
 
-.socials i:hover {
+.socials a:hover {
     transform: translateY(-5px);
     color: var(--neon-green-color);
 }
 
+@media (max-width: 768px) {
+    h1{
+        font-size: 20px;
+    }
 
-@keyframes fade-in{
-    100%{
-        opacity: 100%;
+    .intro span{
+        font-size: 16px;
+    }
+
+    p{
+        font-size: 12px;
+    }
+
+    .img-container {
+        width: 50%;
+    }
+
+}
+
+@media (max-width: 480px) {
+    .section{
+        margin-bottom: 1rem;
+    }
+
+    .intro h1 {
+        font-size: 1.6rem;
+    }
+
+    .img-container {
+        width: 70%;
+    }
+
+    .middle {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .section {
+        margin-bottom: 1rem;
+    }
+
+    .socials {
+        font-size: 1.5rem;
     }
 }
