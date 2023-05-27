@@ -162,11 +162,15 @@ p, h1, h2, h3, a, ul {
     color: var(--neon-green-color);
 }
 
+.content{
+    display: initial;
+}
+
 .loader {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    height:100vh;
   }
   
   .loader-text {
