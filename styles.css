@@ -163,7 +163,7 @@ p, h1, h2, h3, a, ul {
 }
 
 .content{
-    display: initial;
+    display: none;
 }
 
 .loader {
