@@ -135,6 +135,20 @@ p, h1, h2, h3, a, ul {
 .socials {
     display: flex;
     font-size: 2rem;
+    position: relative;
+}
+
+.socials::before{
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    width: 100%;
+    height: 2px;
+    background-color: rgba(100, 255, 218, 0.45);
+    pointer-events: none;
+    z-index: 2;
+    transition: 0.5s ease;
 }
 
 .socials a {
