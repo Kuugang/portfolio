@@ -162,6 +162,19 @@ p, h1, h2, h3, a, ul {
     color: var(--neon-green-color);
 }
 
+.loader {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  
+  .loader-text {
+    font-size: 24px;
+    color: var(--neon-green-color);
+    margin-top: 20px;
+  }
+
 @media (max-width: 768px) {
     h1{
         font-size: 20px;
@@ -209,15 +222,3 @@ p, h1, h2, h3, a, ul {
 }
 
 
-.loader {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-  }
-  
-  .loader-text {
-    font-size: 24px;
-    color: #333;
-    margin-top: 20px;
-  }
